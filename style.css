@@ -45,7 +45,7 @@ body {
 }
 
 .header input[type='text'] {
-    width: 400px;
+    width: min(400px, 80vw);
     font-size: larger;
     background-color: var(--palette-2);
     border-color: var(--palette-1);
@@ -125,7 +125,7 @@ h2 {
     align-items: center;
     justify-content: center;
     height: 350px;
-    width: 500px;
+    width: min(500px, 95vw);
     background-color: var(--palette-1);
     margin: 10px;
     padding: 0;
