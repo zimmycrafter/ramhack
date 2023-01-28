@@ -5,8 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WIP</title>
+    <link rel="stylesheet" href="/style.css">
+    <script src="/main.js"></script>
 </head>
 <body>
-    This feature is a work in progress
+     <div class="header">
+                <div class="autocomplete">
+                    <input id="myInput" type="text" placeholder="Search Categories">
+                    <script>
+                        autocomplete(document.getElementById("myInput"), categories);
+                        showAllCategoriesOnClick(document.getElementById("myInput"), categories);
+                    </script>
+                </div>
+                <button id="submit">Submit</button>
+                <script>changePage(document.getElementById("submit"));</script>
+    </div>
+
+    <a href="/"><h1>Garbage Gurus</h1></a>
+    <div class="sorry">
+        <div>Sorry, this feature is a work in progress.</div>
+        <img src="/images/wip.png">
+    </div>
+    <div class="footer">
+        <p>John Paris • Lucas Boyle • Isaiah Zimmerman • Logan McKinney</p>
+    </div>
 </body>
 </html>

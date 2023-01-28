@@ -159,7 +159,7 @@ function submitPicture() {
 // (Can't use `typeof FileReader === "function"` because apparently it
 // comes back as "object" on some browsers. So just see if it's there
 // at all.)
-  window.location.href = "wip.html"
+  window.location.href = "/wip"
 }
 
 function previewFile() {
