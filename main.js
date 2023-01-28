@@ -97,3 +97,33 @@ function autocomplete(inp, arr) {
       closeAllLists(e.target);
   });
   }
+
+function showAllCategoriesOnClick(inp, arr) {
+    inp.addEventListener("focus", function() {
+        var categoryList, listItem, i, val = this.value;
+        var categoryList = document.createElement("DIV");
+        categoryList.setAttribute("id", this.id + "autocomplete-list");
+        categoryList.setAttribute("class", "autocomplete-items");
+        categoryList.setAttribute("id", "category-list");
+        for (var i = 0; i < arr.length; i++) {
+            var listItem = document.createElement("DIV");
+            /*make the matching letters bold:*/
+            listItem.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+            listItem.innerHTML += arr[i].substr(val.length);
+            /*insert a input field that will hold the current array item's value:*/
+            listItem.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+            /*execute a function when someone clicks on the item value (DIV element):*/
+            listItem.addEventListener("click", function(e) {
+                /*insert the value for the autocomplete text field:*/
+                inp.value = this.getElementsByTagName("input")[0].value;
+                /*close the list of autocompleted values,
+                (or any other open lists of autocompleted values:*/
+                closeAllLists();
+            });
+            categoryList.appendChild(listItem);
+        }
+        this.parentNode.appendChild(categoryList);
+    });
+}
+
+

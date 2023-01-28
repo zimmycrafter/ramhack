@@ -28,12 +28,25 @@ body {
 .header form {
     display: flex;
     justify-content: center;
-
 }
 
 .header input[type='text'] {
     width: 400px;
     font-size: larger;
+    background-color: #FFF2F2;
+    border-color: #8EA7E9;
+    border-style: solid;
+    border-radius: 8px;
+}
+
+.header input[type='submit'] {
+    background-color: #8EA7E9;
+    border: none;
+    border-radius: 8px;
+}
+
+.header input[type='submit']:hover {
+    background-color: #7286D3;
 }
 .autocomplete-items {
     position: absolute;
@@ -90,17 +103,23 @@ h2 {
     justify-content: center;
     height: 350px;
     width: 500px;
-    background-color: aliceblue;
+    background-color: #FFF2F2;
     margin: auto;
     padding: 0;
+    border-radius: 8px;
 }
 
 .contents input, ::file-selector-button{
     background-color: #8EA7E9;
+    border-radius: 8px;
 }
 
 .contents input {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.contents input[type='submit']:hover, input[type='file']::file-selector-button:hover {
+    background-color: #7286D3;
 }
