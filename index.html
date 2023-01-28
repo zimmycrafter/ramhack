@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="header">
-        <form autocomplete="off" action="POST" style="width:500px;">
+        <form autocomplete="off" style="width:500px;">
                 <div class="autocomplete">
                     <input id="myInput" type="text" placeholder="Search Categories">
                     <script>
@@ -18,7 +18,8 @@
                         showAllCategoriesOnClick(document.getElementById("myInput"), categories);
                     </script>
                 </div>
-                <input type="submit">
+                <button id="submit">Submit</button>
+                <script>changePage(document.getElementById("submit"));</script>
         </form>
 
     </div>

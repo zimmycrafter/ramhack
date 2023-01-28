@@ -99,6 +99,17 @@ function autocomplete(inp, arr) {
   }
 
 function showAllCategoriesOnClick(inp, arr) {
+
+    function closeAllLists(elmnt) {
+        /*close all autocomplete lists in the document,
+        except the one passed as an argument:*/
+        var x = document.getElementsByClassName("autocomplete-items");
+        for (var i = 0; i < x.length; i++) {
+          if (elmnt != x[i] && elmnt != inp) {
+          x[i].parentNode.removeChild(x[i]);
+        }
+      }
+    }
     inp.addEventListener("focus", function() {
         var categoryList, listItem, i, val = this.value;
         var categoryList = document.createElement("DIV");
@@ -126,4 +137,20 @@ function showAllCategoriesOnClick(inp, arr) {
     });
 }
 
-
+function changePage(inp) {
+    inp.addEventListener("click", function() {
+        var input = document.getElementById("myInput").value;
+        if (input === "Can") {
+            window.location = "categories/can.html"
+        }
+        if (input === "Plastic") {
+            window.location = "categories/plastic.html"
+        }
+        if (input === "Paper") {
+            window.location = "categories/paper.html"
+        }
+        if (input === "Glass") {
+            window.location = "categories/glass.html"
+        }
+    });
+}
