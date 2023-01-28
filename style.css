@@ -1,4 +1,6 @@
-
+h1{
+    text-align: center;
+}
 
 body {
     display: flex;
@@ -42,4 +44,10 @@ body {
     background-color: aqua;
     width: 100%;
     bottom: 0;
+}
+
+form{
+    display: flex;
+    width: 50%;
+    margin: auto auto;
 }
