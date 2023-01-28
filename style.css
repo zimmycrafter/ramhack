@@ -107,7 +107,7 @@ body {
     color: var(--palette-3);
 }
 
-.contents form{
+.inputs{
     display: flex;
     width: 50%;
     flex-direction: column;
@@ -127,19 +127,19 @@ h2 {
     height: 350px;
     width: 500px;
     background-color: var(--palette-1);
-    margin: auto;
+    margin: 10px;
     padding: 0;
     border-radius: 8px;
 }
 
-.contents input, ::file-selector-button{
+.fileInput, ::file-selector-button, .submitItems{
     background-color: var(--palette-2);
     border-radius: 8px;
     color: var(--palette-3);
 
 }
 
-.contents input {
+.contents input, submitItems {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -147,9 +147,13 @@ h2 {
 
 }
 
-.contents input[type='submit']:hover, input[type='file']::file-selector-button:hover {
+.fileInput:hover, .submitItems:hover {
     background-color: var(--palette-3);
     color: var(--palette-1);
+}
+
+.submissionInfo{
+    color: var(--palette-3)
 }
 
 .body ul {
