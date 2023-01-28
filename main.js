@@ -141,16 +141,16 @@ function changePage(inp) {
     inp.addEventListener("click", function() {
         var input = document.getElementById("myInput").value;
         if (input === "Can") {
-            window.location = "categories/can.html"
+            window.location.href = "can.html"
         }
         if (input === "Plastic") {
-            window.location = "categories/plastic.html"
+            window.location.href = "plastic.html"
         }
         if (input === "Paper") {
-            window.location = "categories/paper.html"
+            window.location.href = "paper.html"
         }
         if (input === "Glass") {
-            window.location = "categories/glass.html"
+            window.location.href = "glass.html"
         }
     });
 }
