@@ -10,20 +10,30 @@
 </head>
 <body>
     <div class="header">
-        <p>What thed </p>
-        <input type="text" placeholder="Search Categories">
+        <form autocomplete="off" action="POST" style="width:500px;">
+                <div class="autocomplete">
+                    <input id="myInput" type="text" placeholder="Search Categories">
+                    <script>
+                        autocomplete(document.getElementById("myInput"), categories);
+                    </script>
+                </div>
+                <input type="submit">
+        </form>
+
     </div>
 
+    <h1>Garbage Guru</h1>
+    <p>Upload a file below to get info on how to recycle it's type of material:</p>
     <div class="contents">
-        <div></div>
-        <form action="POST">
-            <input type="file"  alt="Submit" width="48" height="48"> 
-            <input type="submit">
+        <img src="images\upload-to-cloud.png" alt="Upload Image">
+        <p>No File Chosen</p>
+        <form autocomplete="off" action="POST">
+                <input type="file" alt="Submit" width="48" height="48"/> 
+                <input type="submit">
         </form>
-        <div></div>
     </div>
     <div class="footer">
-        <p>hi</p>
+        <p>John Paris - Lucas Boyle - Isaiah Zimmerman - Logan McKinney</p>
     </div>
 </body>
 </html>

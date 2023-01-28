@@ -2,6 +2,10 @@ h1{
     text-align: center;
 }
 
+.contents, html, body {
+    height: 100%;
+    margin: 0;
+}
 body {
     display: flex;
     flex-direction: column;
@@ -9,40 +13,68 @@ body {
     margin: 0;
     height: 100%;
     background-color: #E5E0FF;
+    align-items: center;
+    justify-content: space-between;
+    gap: auto;
 }
 
-.body {
+.autocomplete {
+    /*the container must be positioned relative:*/
+    position: relative;
+    display: inline-block;
+    justify-content: center;
+}
+
+.header form {
     display: flex;
+    justify-content: center;
+
 }
 
-.header {
-    display: flex;
-    padding: 0;
+.header input[type='text'] {
+    width: 400px;
+    font-size: larger;
+}
+.autocomplete-items {
+    position: absolute;
+    border: 1px solid #d4d4d4;
+    border-bottom: none;
+    border-top: none;
+    z-index: 99;
+    /*position the autocomplete items to be the same width as the container:*/
+    top: 100%;
+    left: 0;
+    right: 0;
 }
 
-.header p {
-    font-weight: bolder;
-    font-size: large;
+.autocomplete-items div {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #fff;
+    border-bottom: 1px solid #d4d4d4;
 }
-.header input {
-    margin-left: auto;
-    background-color: #E5E0FF;
-    border-radius: 6px;
-    size: auto auto;
+.autocomplete-items div:hover {
+    /*when hovering an item:*/
+    background-color: #e9e9e9;
 }
-
-
+.autocomplete-active {
+    /*when navigating through the items using the arrow keys:*/
+    background-color: DodgerBlue !important;
+    color: #ffffff;
+}
+  
 .footer {
+    display: flex;
+    justify-content: center;
     position: absolute;
     background-color: #8EA7E9;
     width: 100%;
     bottom: 0;
 }
 
-form{
+.contents form{
     display: flex;
     width: 50%;
-    margin: auto auto;
     flex-direction: column;
     justify-content: center;
 }
@@ -52,6 +84,23 @@ h2 {
 }
 
 .contents {
-    display: grid;
-    grid-template-rows: 50% max-content 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 350px;
+    width: 500px;
+    background-color: aliceblue;
+    margin: auto;
+    padding: 0;
+}
+
+.contents input, ::file-selector-button{
+    background-color: #8EA7E9;
+}
+
+.contents input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
