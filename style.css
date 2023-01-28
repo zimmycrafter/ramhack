@@ -17,13 +17,14 @@ body {
     display: flex;
     flex-direction: column;
     padding: 0;
-    margin: 15px;
+    margin: 10px;
     height: 100%;
     background-color: var(--palette-3);
     align-items: center;
     justify-content: space-between;
     gap: auto;
     color: var(--palette-0);
+    text-align: center;
 }
 
 #myInput{
@@ -220,4 +221,8 @@ a{
 
 a:hover{
     text-decoration: underline;
+}
+
+.body{
+    text-align: center;
 }
