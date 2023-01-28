@@ -132,6 +132,12 @@ h2 {
     border-radius: 8px;
 }
 
+#blah{
+    max-width: 50%;
+    max-height: 300px;
+    margin-bottom: 10px;
+}
+
 .fileInput, ::file-selector-button, .submitItems{
     background-color: var(--palette-2);
     border-radius: 8px;

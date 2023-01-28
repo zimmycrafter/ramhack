@@ -7,6 +7,8 @@
     <title>Garbage Gurus</title>
     <link rel="stylesheet" href="style.css">
     <script src="main.js"></script>
+    <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
 </head>
 <body>
     <div class="header">
@@ -24,7 +26,7 @@
     <a href="/"><h1>Garbage Gurus</h1></a>
     <p>Upload a file below to get info on how to recycle its type of material:</p>
     <div class="contents">
-        <img src="images\upload-to-cloud.png" alt="Upload Image">
+        <img src="images\upload-to-cloud.png" alt="Upload Image" id="blah">
         <p class="submissionInfo">No File Chosen</p>
         <div class="inputs">
             <input 
@@ -35,6 +37,7 @@
             width="48" 
             height="48"
             accept=".png,.jpg,.jpeg,.heic"
+            onchange="previewFile()"
             /> 
             <button class="submitItems" id="btnLoad" onclick="submitPicture()">Submit</button>
         </div>

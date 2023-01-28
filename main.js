@@ -159,24 +159,22 @@ function submitPicture() {
 // (Can't use `typeof FileReader === "function"` because apparently it
 // comes back as "object" on some browsers. So just see if it's there
 // at all.)
-if (!window.FileReader) { // This is VERY unlikely, browser support is near-universal
-  console.log("The file API isn't supported on this browser yet.");
-  return;
+  window.location.href = "wip.html"
 }
 
-var input = document.getElementById('fileinput');
-if (!input.files) { // This is VERY unlikely, browser support is near-universal
-  console.error("This browser doesn't seem to support the `files` property of file inputs.");
-} else if (!input.files[0]) {
-  addPara("Please select a file before clicking 'Load'");
-} else {
-  var file = input.files[0];
-  addPara(`<img src="${file.val}">`)
-}
-}
+function previewFile() {
+  var preview = document.querySelector('img');
+  var file    = document.querySelector('input[type=file]').files[0];
+  var reader  = new FileReader();
 
-function addPara(text) {
-  var p = document.createElement("p");
-  p.textContent = text;
-  document.body.appendChild(p);
+  reader.onloadend = function () {
+    preview.src = reader.result;
+  }
+
+  if (file) {
+    reader.readAsDataURL(file);
+    document.querySelector(".submissionInfo").hidden = true
+  } else {
+    preview.src = "";
+  }
 }
