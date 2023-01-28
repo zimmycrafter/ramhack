@@ -102,7 +102,7 @@ body {
     display: flex;
     justify-content: center;
     flex-shrink: 0;
-    background-color: var(--palette-1);
+    background-color: var(--palette-0);
     width: 100%;
     color: var(--palette-3);
 }
