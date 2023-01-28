@@ -4,11 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Plastic</title>
     <link rel="stylesheet" href="style.css">
     <script src="main.js"></script>
 </head>
-<body>
-    
+<body style="gap: 0; justify-content: baseline; height:auto;">
+    <div class="header">
+        <div class="autocomplete">
+            <input id="myInput" type="text" placeholder="Search Categories">
+            <script>
+                autocomplete(document.getElementById("myInput"), categories);
+                showAllCategoriesOnClick(document.getElementById("myInput"), categories);
+            </script>
+        </div>
+        <button id="submit">Submit</button>
+        <script>changePage(document.getElementById("submit"));</script>
+    </div>
+    <h1>Garbage Guru</h1>
+    <div class="body">
+        <h2>Plastic Symbols</h2>
+        <img src="images/plastic-recycling.png" alt="Recycling symbols for plastic">
+        <h2>Why Should You Recycle Plastic?</h2>
+        <ul>
+            <li>Recycling plastic saves space in landfills around the world</li>
+            <li>It is very accessable, more than 60% of Americans have access to plastic recycling programs</li>
+            <li>Recycling plastic greatly reduces fossil fuel consumption</li>
+        </ul>
+        <h2>Where Can You Recycle Plastic?</h2>
+        <p>Here is a great resource to find a recycling center near you</p>
+        <p><a href="https://www.recyclingcenternear.me/plastic-recycling-near-me/">Recycling Center Near Me</a></p></p>
+    </div>
+    <div class="footer">
+        <p>John Paris - Lucas Boyle - Isaiah Zimmerman - Logan McKinney</p>
+    </div>
 </body>
 </html>

@@ -4,11 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Glass</title>
     <link rel="stylesheet" href="style.css">
     <script src="main.js"></script>
 </head>
-<body>
-    
+<body style="gap: 0; justify-content: baseline; height:auto;">
+    <div class="header">
+        <div class="autocomplete">
+            <input id="myInput" type="text" placeholder="Search Categories">
+            <script>
+                autocomplete(document.getElementById("myInput"), categories);
+                showAllCategoriesOnClick(document.getElementById("myInput"), categories);
+            </script>
+        </div>
+        <button id="submit">Submit</button>
+        <script>changePage(document.getElementById("submit"));</script>
+    </div>
+    <h1>Garbage Guru</h1>
+    <div class="body">
+        <h2>Glass Symbol</h2>
+        <img src="images/glass-recycling.png" alt="Recycling symbol for glass">
+        <h2>Why Should You Recycle Glass?</h2>
+        <ul>
+            <li>Recycling glass saves space in landfills around the world</li>
+            <li>Glass does not deteriorate and lose quality</li>
+            <li>Recycling glass greatly reduces CO2 emissions and energy use</li>
+        </ul>
+        <h2>Where Can You Recycle Glass?</h2>
+        <p>Here is a great resource to find a recycling center near you</p>
+        <p><a href="https://www.recyclingcenternear.me/glass-recycling-near-me/">Recycling Center Near Me</a></p></p>
+    </div>
+    <div class="footer">
+        <p>John Paris - Lucas Boyle - Isaiah Zimmerman - Logan McKinney</p>
+    </div>
 </body>
 </html>
