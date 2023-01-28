@@ -28,6 +28,7 @@ body {
 .header {
     display: flex;
     justify-content: center;
+    margin-top: 10px;
 }
 
 .header input[type='text'] {
@@ -37,6 +38,7 @@ body {
     border-color: #8EA7E9;
     border-style: solid;
     border-radius: 8px;
+    padding: 4px;
 }
 
 .header button {
