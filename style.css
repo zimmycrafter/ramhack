@@ -1,3 +1,45 @@
-:root{
-    
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+.body {
+    display: flex;
+}
+
+.header {
+    display: flex;
+    padding: 0;
+    background-color: gainsboro;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+
+    padding: 6px;
+    margin: 0;
+    background-color: gainsboro;
+    border: 4px solid gray;
+
+}
+
+.menu:hover {
+    background-color: bisque;
+}
+.left-side {
+    display: flex;
+}
+
+
+.footer {
+    position: absolute;
+    background-color: aqua;
+    width: 100%;
+    bottom: 0;
 }
