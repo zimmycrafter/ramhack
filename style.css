@@ -105,6 +105,8 @@ body {
     background-color: var(--palette-0);
     width: 100%;
     color: var(--palette-3);
+    text-align: center;
+    padding: 3px;
 }
 
 .inputs{
