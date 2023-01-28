@@ -4,11 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Paper</title>
     <link rel="stylesheet" href="style.css">
     <script src="main.js"></script>
 </head>
-<body>
-    
+<body style="gap: 0; justify-content: baseline; height:auto;">
+    <div class="header">
+        <div class="autocomplete">
+            <input id="myInput" type="text" placeholder="Search Categories">
+            <script>
+                autocomplete(document.getElementById("myInput"), categories);
+                showAllCategoriesOnClick(document.getElementById("myInput"), categories);
+            </script>
+        </div>
+        <button id="submit">Submit</button>
+        <script>changePage(document.getElementById("submit"));</script>
+    </div>
+    <a href="/"><h1>Garbage Guru</h1></a>
+    <div class="body">
+        <h2>Paper Symbol</h2>
+        <img src="images/paper-recycling.png" alt="Recycling symbol for paper">
+        <h2>Why Should You Recycle Paper?</h2>
+        <ul>
+            <li>Recycling Paper allows paper and other products to be created from the materials that were recycled.</li>
+            <li>Recycled paper use saves resources and reduces the paper industry's impact on the planet.</li>
+            <li>Because paper is made from trees, recycling helps curb deforestation and helps the planet.</li>
+        </ul>
+        <h2>Where Can You Recycle Paper?</h2>
+        <ul>
+            
+            <li>Most residential recycling bins</li>
+            <li>Local dropoff bins</li>
+            <strong><li>Note: it is important that the paper you recycle is clean and free of contaminants.</li><li>If recycling centers recieve contaminated materials, they will not be able to recycle them.</li></strong>
+        </ul>
+    </div>
+    <div class="footer">
+        <p>John Paris • Lucas Boyle • Isaiah Zimmerman • Logan McKinney</p>
+    </div>
 </body>
 </html>

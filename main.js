@@ -139,17 +139,17 @@ function showAllCategoriesOnClick(inp, arr) {
 
 function changePage(inp) {
     inp.addEventListener("click", function() {
-        var input = document.getElementById("myInput").value;
-        if (input === "Can") {
+        var input = document.getElementById("myInput").value.toLowerCase();
+        if (input === "can") {
             window.location.href = "can.html"
         }
-        if (input === "Plastic") {
+        if (input === "plastic") {
             window.location.href = "plastic.html"
         }
-        if (input === "Paper") {
+        if (input === "paper") {
             window.location.href = "paper.html"
         }
-        if (input === "Glass") {
+        if (input === "glass") {
             window.location.href = "glass.html"
         }
     });
